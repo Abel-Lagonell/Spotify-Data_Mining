@@ -1,0 +1,45 @@
+\documentclass[12pt]{report}
+
+% import and apply GIRS "formatting.sty" file
+\usepackage{import}
+\usepackage{formatting}
+\usepackage[section]{placeins}
+\usepackage{tabularx}
+
+% load hyperref last to minimize conflicts
+\usepackage{xcolor}
+\usepackage[linktocpage=true]{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue}
+
+%-------------------------------------------------------
+\begin{document}
+
+%-------------------------------------------------------
+\frontmatter
+\include{Title}
+\phantomsection
+
+\phantomsection 
+\insertTOC
+\setcounter{tocdepth}{2}
+
+\phantomsection 
+\insertLOF
+
+%-------------------------------------------------------
+\mainmatter
+\include{Chapter_01}
+\include{Chapter_02}
+\include{Chapter_03}
+\include{Chapter_04}
+\include{Chapter_05}
+\include{Chapter_06}
+\include{Chapter_07}
+
+%-------------------------------------------------------
+\backmatter
+\bibliographystyle{ascelike}
+\bibliography{references}
+
+\end{document}
+%-------------------------------------------------------
